@@ -1,0 +1,8 @@
+﻿ID,Change Direction,Intensity,Full Category Name,Percentage Change Range (%)
+1,Negative,Large,Large negative change,below -5%
+2,Negative,Medium,Medium negative change,from -5% to -2%
+3,Negative,Small,Small negative change,from -2% to 0%
+4,No change,None,No change,exactly 0%
+5,Positive,Small,Small positive change,from 0% to +2%
+6,Positive,Medium,Medium positive change,from +2% to +5%
+7,Positive,Large,Large positive change,above +5%

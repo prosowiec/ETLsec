@@ -1,0 +1,13 @@
+{"timestamp":"2025-06-09T20:33:38.157892","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-09T20:33:38.158354","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/fact_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-09T20:33:39.123152Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_AAPL.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.128074Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_AMD.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.138725Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_AMZN.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.147466Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_GOOGL.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.156731Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_INTC.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.167603Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_META.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.176222Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_MSFT.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.187305Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_NFLX.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.195972Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_NVDA.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.208084Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_TSLA.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:33:39.578562","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

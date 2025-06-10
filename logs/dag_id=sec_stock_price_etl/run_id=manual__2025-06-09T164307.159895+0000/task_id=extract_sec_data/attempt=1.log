@@ -1,0 +1,14 @@
+{"timestamp":"2025-06-09T16:43:07.769742","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-09T16:43:07.770443","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/fact_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-09T16:43:09.277376Z","level":"info","event":"Spy table loaded with 2 tickers","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:43:10.203252","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T16:43:37.440006Z","level":"info","event":"0001652044 GOOGL loaded in 28.162413597106934","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:43:38.745485","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T16:44:42.025488Z","level":"info","event":"0000789019 MSFT loaded in 64.5854709148407","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:44:42.026020Z","level":"info","event":"Batch 1 loaded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:44:42.026276Z","level":"info","event":"Process has compleded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:44:42.026523Z","level":"info","event":"Data has loaded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:44:42.026749Z","level":"info","event":"-------------- Loaded tickers --------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:44:42.027059Z","level":"info","event":"[['GOOGL' '0001652044']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:44:42.027296Z","level":"info","event":" ['MSFT' '0000789019']]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T16:44:42.242410","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

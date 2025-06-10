@@ -1,0 +1,72 @@
+{"timestamp":"2025-06-09T20:50:51.824416","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-09T20:50:51.825104","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/fact_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-09T20:50:53.152691Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_AAPL.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.164634Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_AMD.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.175221Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_AMZN.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.183002Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_GOOGL.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.190821Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_INTC.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.199812Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_META.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.207393Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_MSFT.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.216893Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_NFLX.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.223856Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_NVDA.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.233391Z","level":"info","event":"📄 Wczytywanie: /opt/airflow/transcriptData/transcripts_TSLA.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.544673Z","level":"info","event":"   transcriptID  TransLength  ...  NegativeWordCount  SentimentScore","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.545043Z","level":"info","event":"0    AAPLQ12024        44898  ...                  1         55.8001","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.545239Z","level":"info","event":"1    AAPLQ22024        47006  ...                  3         42.8461","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.545436Z","level":"info","event":"2    AAPLQ32024        46244  ...                  4         52.8202","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.545618Z","level":"info","event":"3    AAPLQ42024        46162  ...                  4         41.8258","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.545803Z","level":"info","event":"4    AAPLQ12025        45839  ...                  3         49.8208","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.546054Z","level":"info","event":"5    AAPLQ22025        46767  ...                 11         20.8355","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.546276Z","level":"info","event":"6     AMDQ12024        50540  ...                  9         54.8973","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.546446Z","level":"info","event":"7     AMDQ22024        48113  ...                  6         54.8401","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.546624Z","level":"info","event":"8     AMDQ32024        54572  ...                  5         75.9577","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.546825Z","level":"info","event":"9     AMDQ42024        51044  ...                  3         86.8892","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.547022Z","level":"info","event":"10    AMDQ12025        54107  ...                  4         76.9381","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.547306Z","level":"info","event":"11   AMZNQ12024        50515  ...                  0         59.8827","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.547561Z","level":"info","event":"12   AMZNQ22024        46741  ...                  2         51.8268","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.547777Z","level":"info","event":"13   AMZNQ32024        46172  ...                  1         54.8064","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.547990Z","level":"info","event":"14   AMZNQ42024        47782  ...                  5         36.8327","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.548203Z","level":"info","event":"15   AMZNQ12025        48530  ...                  1         42.8599","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.548405Z","level":"info","event":"16  GOOGLQ12024        50265  ...                  5         77.8594","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.548583Z","level":"info","event":"17  GOOGLQ22024        50927  ...                  8         73.8773","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.548777Z","level":"info","event":"18  GOOGLQ32024        56645  ...                  4         70.9741","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.548948Z","level":"info","event":"19  GOOGLQ42024        53083  ...                  7         93.9083","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.549106Z","level":"info","event":"20  GOOGLQ12025        50107  ...                  6         82.8559","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.549270Z","level":"info","event":"21   INTCQ12024        60311  ...                  7         42.0663","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.549438Z","level":"info","event":"22   INTCQ22024        62202  ...                  4         30.0929","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.549673Z","level":"info","event":"23   INTCQ32024        57700  ...                  3         22.0219","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.549895Z","level":"info","event":"24   INTCQ42024        56288  ...                 10         13.0229","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.550092Z","level":"info","event":"25   INTCQ12025        55685  ...                  6         24.0122","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.550276Z","level":"info","event":"26   METAQ12024        53331  ...                  3         40.9430","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.550501Z","level":"info","event":"27   METAQ22024        56710  ...                  2         49.0147","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.550742Z","level":"info","event":"28   METAQ32024        51796  ...                  1         59.9185","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.550942Z","level":"info","event":"29   METAQ42024        53794  ...                  2         57.9701","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.551169Z","level":"info","event":"30   METAQ12025        53884  ...                  1         36.9482","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.551519Z","level":"info","event":"31   MSFTQ12024        54056  ...                  5         87.9073","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.551762Z","level":"info","event":"32   MSFTQ22024        55959  ...                  6         91.9530","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.552000Z","level":"info","event":"33   MSFTQ32024        55260  ...                 10         75.9351","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.552216Z","level":"info","event":"34   MSFTQ42024        53305  ...                  7         79.9055","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.552433Z","level":"info","event":"35   MSFTQ12025        55876  ...                  9         89.9668","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.552677Z","level":"info","event":"36   MSFTQ22025        52937  ...                 11         66.9144","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.552901Z","level":"info","event":"37   MSFTQ32025        48866  ...                  9         71.8346","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.553121Z","level":"info","event":"38   NFLXQ12024        45545  ...                  3         70.8446","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.553330Z","level":"info","event":"39   NFLXQ22024        43730  ...                  3         51.8039","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.553534Z","level":"info","event":"40   NFLXQ32024        38944  ...                  5         38.7169","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.553727Z","level":"info","event":"41   NFLXQ42024        32945  ...                  2         32.6000","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.553946Z","level":"info","event":"42   NFLXQ12025        37384  ...                  1         19.6734","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.554151Z","level":"info","event":"43   NVDAQ12024        54208  ...                 11         38.9307","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.554374Z","level":"info","event":"44   NVDAQ22024        49995  ...                  2         25.8527","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.554569Z","level":"info","event":"45   NVDAQ32024        54256  ...                  3         35.9246","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.554758Z","level":"info","event":"46   NVDAQ42024        48484  ...                  2         20.8178","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.554960Z","level":"info","event":"47   NVDAQ12025        49633  ...                  7         29.8487","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.555153Z","level":"info","event":"48   NVDAQ22025        52779  ...                  2         30.9095","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.555352Z","level":"info","event":"49   NVDAQ32025        48769  ...                  2         41.8524","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.555557Z","level":"info","event":"50   NVDAQ42025        46862  ...                  0         23.8024","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.555753Z","level":"info","event":"51   TSLAQ12024        56672  ...                  4         26.0420","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.555966Z","level":"info","event":"52   TSLAQ22024        47147  ...                  2         21.8660","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.556171Z","level":"info","event":"53   TSLAQ32024        54800  ...                  7         24.0104","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.556349Z","level":"info","event":"54   TSLAQ42024        53248  ...                 13         16.9916","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.556517Z","level":"info","event":"55   TSLAQ12025        66828  ...                 11          0.2285","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.556680Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.556851Z","level":"info","event":"[56 rows x 6 columns]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:50:53.550543","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

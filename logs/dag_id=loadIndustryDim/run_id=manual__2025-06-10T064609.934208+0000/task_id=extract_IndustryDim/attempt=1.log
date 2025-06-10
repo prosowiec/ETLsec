@@ -1,0 +1,11 @@
+{"timestamp":"2025-06-10T06:46:10.849198","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-10T06:46:10.849919","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/loadIndustryDim.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-10T06:46:11.993469Z","level":"info","event":"  Symbol             Security  ...         CIK      Founded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:11.994196Z","level":"info","event":"0    MMM                   3M  ...  0000066740         1902","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:11.994658Z","level":"info","event":"1    AOS          A. O. Smith  ...  0000091142         1916","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:11.995048Z","level":"info","event":"2    ABT  Abbott Laboratories  ...  0000001800         1888","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:11.995387Z","level":"info","event":"3   ABBV               AbbVie  ...  0001551152  2013 (1888)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:11.995763Z","level":"info","event":"4    ACN            Accenture  ...  0001467373         1989","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:11.996090Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:11.996453Z","level":"info","event":"[5 rows x 8 columns]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:46:12.008259","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

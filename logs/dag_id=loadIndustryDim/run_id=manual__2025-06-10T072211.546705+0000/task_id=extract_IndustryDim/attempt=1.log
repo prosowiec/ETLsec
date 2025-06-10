@@ -1,0 +1,11 @@
+{"timestamp":"2025-06-10T07:22:12.667864","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-10T07:22:12.668400","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/loadIndustryDim.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-10T07:22:13.542815Z","level":"info","event":"    Symbol                 Security  ...         CIK Founded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.543743Z","level":"info","event":"6      AMD   Advanced Micro Devices  ...  0000002488    1969","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.544019Z","level":"info","event":"19   GOOGL  Alphabet Inc. (Class A)  ...  0001652044    1998","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.544267Z","level":"info","event":"22    AMZN                   Amazon  ...  0001018724    1994","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.544482Z","level":"info","event":"39    AAPL               Apple Inc.  ...  0000320193    1977","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.544680Z","level":"info","event":"249   INTC                    Intel  ...  0000050863    1968","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.544890Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.545150Z","level":"info","event":"[5 rows x 8 columns]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T07:22:13.555552","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

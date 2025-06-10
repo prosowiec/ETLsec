@@ -1,0 +1,11 @@
+{"timestamp":"2025-06-10T06:39:38.072285","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-10T06:39:38.073204","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/loadStockPriceDim.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-10T06:39:40.350610Z","level":"info","event":"   ID Change Direction  ...      Full Category Name Percentage Change Range (%)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.351744Z","level":"info","event":"0   1         Negative  ...   Large negative change                   below -5%","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.352227Z","level":"info","event":"1   2         Negative  ...  Medium negative change             from -5% to -2%","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.352653Z","level":"info","event":"2   3         Negative  ...   Small negative change              from -2% to 0%","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.353038Z","level":"info","event":"3   4        No change  ...               No change                  exactly 0%","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.353395Z","level":"info","event":"4   5         Positive  ...   Small positive change              from 0% to +2%","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.353790Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.354118Z","level":"info","event":"[5 rows x 5 columns]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-10T06:39:40.444497","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

@@ -1,0 +1,38 @@
+{"timestamp":"2025-06-09T20:25:40.575179","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-09T20:25:40.576027","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/fact_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-09T20:25:44.339889Z","level":"info","event":"Spy table loaded with 10 tickers","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:25:45.516094","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:26:20.534025Z","level":"info","event":"0000002488 AMD loaded in 36.19410276412964","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:26:21.396910","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:26:52.528687Z","level":"info","event":"0001652044 GOOGL loaded in 31.994565725326538","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:26:53.806680","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:27:32.017537Z","level":"info","event":"0001018724 AMZN loaded in 39.48882484436035","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:27:33.076454","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:28:10.019275Z","level":"info","event":"0000320193 AAPL loaded in 38.00169062614441","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:28:11.249384","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:28:49.985926Z","level":"info","event":"0000050863 INTC loaded in 39.966580867767334","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:28:50.926408","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:29:12.375890Z","level":"info","event":"0001326801 META loaded in 22.389906644821167","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:29:13.608371","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:29:50.407223Z","level":"info","event":"0000789019 MSFT loaded in 38.03130793571472","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:29:51.462301","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:30:19.929986Z","level":"info","event":"0001065280 NFLX loaded in 29.522701263427734","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:30:21.153432","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:30:54.425500Z","level":"info","event":"0001045810 NVDA loaded in 34.495473861694336","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:30:55.538621","level":"warning","event":"/opt/airflow/dags/scraper.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.\n  jsonDataframe = pd.read_json(r).T\n","logger":"py.warnings"}
+{"timestamp":"2025-06-09T20:31:29.656381Z","level":"info","event":"0001318605 TSLA loaded in 35.23074817657471","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.657057Z","level":"info","event":"Batch 1 loaded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.657492Z","level":"info","event":"Process has compleded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.657902Z","level":"info","event":"Data has loaded","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.658213Z","level":"info","event":"-------------- Loaded tickers --------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.658695Z","level":"info","event":"[['AMD' '0000002488']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.659077Z","level":"info","event":" ['GOOGL' '0001652044']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.659411Z","level":"info","event":" ['AMZN' '0001018724']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.659745Z","level":"info","event":" ['AAPL' '0000320193']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.660056Z","level":"info","event":" ['INTC' '0000050863']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.660366Z","level":"info","event":" ['META' '0001326801']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.660732Z","level":"info","event":" ['MSFT' '0000789019']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.661048Z","level":"info","event":" ['NFLX' '0001065280']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.661337Z","level":"info","event":" ['NVDA' '0001045810']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:29.661615Z","level":"info","event":" ['TSLA' '0001318605']]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-09T20:31:32.602584","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
