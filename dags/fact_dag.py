@@ -127,6 +127,77 @@ with DAG(
         #??
         ti.xcom_push(key='enriched_df', value=enriched_df)
 
+    def validate_data(**kwargs):
+        ti = kwargs['ti']
+        df = ti.xcom_pull(key='enriched_df', task_ids='join_transcripts')
+
+        errors = []
+
+        # Sprawdź brakujące wartości w kluczowych kolumnach
+        required_columns = ['ticker', 'reportDate', 'filingDate', 'financialPeriod', 'stockPriceChange']
+        for col in required_columns:
+            if df[col].isnull().any():
+                errors.append(f"🚫 Brakujące wartości w kolumnie: {col}")
+
+        # Sprawdź czy daty mają odpowiedni format
+        try:
+            pd.to_datetime(df['reportDate'])
+            pd.to_datetime(df['filingDate'])
+        except Exception as e:
+            errors.append(f"Błąd konwersji dat: {e}")
+
+        allowed_classes = [x for x in range(0, 8)]
+        if not df['stockPriceChange'].isin(allowed_classes).all():
+            errors.append("Niekatologowane wartości w kolumnie 'stockPriceChange'")
+
+        # Sprawdź duplikaty po ticker+financialPeriod+reportDate
+        if df.duplicated(subset=['ticker', 'financialPeriod', 'reportDate']).any():
+            errors.append("Duplikaty rekordów po ticker + financialPeriod + reportDate")
+
+        if errors:
+            print("\n".join(errors))
+            raise ValueError("Walidacja danych nie powiodła się. Zobacz szczegóły powyżej.")
+        else:
+            print("Walidacja danych zakończona sukcesem.")
+
+    def store_validation_table(**kwargs):
+        ti = kwargs['ti']
+        df = ti.xcom_pull(key='enriched_df', task_ids='join_transcripts')
+
+        financial_columns = [
+            "stockPriceChange", "Assets", "CashAndCashEquivalents",
+            "EarningsPerShareBasic", "GrossProfit", "Liabilities",
+            "NetIncomeLoss", "OperatingCashFlow", "Revenues",
+            "SharesOutstanding", "StockholdersEquity"
+        ]
+
+        missing_data_df = df[df[financial_columns].isnull().any(axis=1)]
+
+        # Wybierz tylko kolumny do walidacji + unikalność
+        #validation_df = missing_data_df[["ticker", "reportDate", "filingDate", "accessionNumber"]].drop_duplicates()
+
+        validation_df = missing_data_df[["ticker", "reportDate", "filingDate", "accessionNumber"] + financial_columns].copy()
+
+       # Zamień wartości na True (brak) / False (obecność danych)
+        for col in financial_columns:
+            validation_df[col] = validation_df[col].isnull()
+
+        validation_df.drop_duplicates(inplace=True)
+
+        # Zapisz do PostgreSQL
+        hook = PostgresHook(postgres_conn_id='sec_postgres')
+        engine = hook.get_sqlalchemy_engine()
+
+        validation_df.to_sql(
+            name='ValidationMissingData',
+            con=engine,
+            index=False,
+            if_exists='replace',  # Możesz zmienić na 'append' jeśli chcesz tworzyć historię
+            schema='stockDB',
+            method='multi'
+        )
+
+        print("Tabela walidacji 'ValidationMissingData' została zapisana w bazie.")
 
         
     def write_to_postgres_sqlalchemy(**kwargs):
@@ -195,5 +266,15 @@ with DAG(
         task_id='export_to_postgres_sqlalchemy',
         python_callable=write_to_postgres_sqlalchemy,
     )
+    
+    task_validate = PythonOperator(
+        task_id='validate_data',
+        python_callable=validate_data,
+    )
+    task_store_validation = PythonOperator(
+        task_id='store_validation_table',
+        python_callable=store_validation_table,
+    )
 
-    task_extract >> task_transform >> task_filter >> task_pivot >> task_join >> task_enrich >> task_load_trascripts >> task_join_trascripts >>task_sqlalchemy_export
+    task_extract >> task_transform >> task_filter >> task_pivot >> task_join >> task_enrich >> task_load_trascripts >> task_join_trascripts \
+    >> task_validate >> task_store_validation >>task_sqlalchemy_export
