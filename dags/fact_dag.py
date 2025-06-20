@@ -13,6 +13,7 @@ from factTransform import (
     merge_company_facts_with_sec_filings,
     add_stock_price_dim,
     add_transcript_info,
+    normalize_to_quarters,
     sec_xbrl_tags
 )
 
@@ -67,10 +68,18 @@ with DAG(
         sec_filling = ti.xcom_pull(key='sec_filling', task_ids='extract_sec_data')
         joined_df = merge_company_facts_with_sec_filings(pivot_df, sec_filling)
         ti.xcom_push(key='joined_df', value=joined_df)
+        
+    def task_normalize_to_quarters(**kwargs):
+        ti = kwargs['ti']
+        df = ti.xcom_pull(key='joined_df', task_ids='join_sec_with_company_facts')
+        normalized_df = normalize_to_quarters(df)
+        #global_data['joined_df'] = result_df
+        ti.xcom_push(key='normalized_df', value=normalized_df)
+
 
     def enrich_with_stock_price(**kwargs):
         ti = kwargs['ti']
-        df = ti.xcom_pull(key='joined_df', task_ids='join_sec_with_company_facts')
+        df = ti.xcom_pull(key='normalized_df', task_ids='task_normalize_to_quarters')
         result_df = add_stock_price_dim(df)
         #global_data['joined_df'] = result_df
         ti.xcom_push(key='result_df', value=result_df)
@@ -116,7 +125,7 @@ with DAG(
         result_df = ti.xcom_pull(key='result_df', task_ids='concat_transcripts')
         # print(trascript_df.head())
         # print(result_df.head())
-        result_df['transcriptID'] = result_df['ticker'] + result_df['financialPeriod'].astype(str) + result_df['reportDate'].str[0:4]
+        result_df['transcriptID'] = result_df['ticker'] + result_df['financialPeriod'].astype(str) + result_df['reportDate'].astype(str).str[0:4]
         enriched_df = pd.merge(
             result_df, 
             trascript_df, 
@@ -246,6 +255,12 @@ with DAG(
         task_id='join_sec_with_company_facts',
         python_callable=join_facts,
     )
+    
+    task_normalize = PythonOperator(
+        task_id='task_normalize_to_quarters',
+        python_callable=task_normalize_to_quarters,
+    )
+
 
     task_enrich = PythonOperator(
         task_id='add_stock_price_change',
@@ -276,5 +291,5 @@ with DAG(
         python_callable=store_validation_table,
     )
 
-    task_extract >> task_transform >> task_filter >> task_pivot >> task_join >> task_enrich >> task_load_trascripts >> task_join_trascripts \
+    task_extract >> task_transform >> task_filter >> task_pivot >> task_join >> task_normalize >> task_enrich >> task_load_trascripts >> task_join_trascripts \
     >> task_validate >> task_store_validation >>task_sqlalchemy_export

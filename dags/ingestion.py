@@ -80,27 +80,6 @@ def get_SEC_filings_and_companyfacts(tickers):
 
 
     return all_sec_filings_df,all_company_facts_df
-if __name__ == "__main__":
-
-    spytable = get_spy500_formWiki()
-    tickers = ["MSFT",  "GOOGL", "AAPL", "AMZN", "META", "TSLA", "NFLX", "NVDA", "AMD", "INTC"]
-    spytable = spytable[spytable['Symbol'].isin(tickers)]
-    spytable = spytable[['Symbol', 'CIK']].values
-    print("Spy table loaded with", len(spytable), "tickers")
-    all_batches = get_spy500_batch_sec(spytable, 16)
-    all_batches = np.array(all_batches).flatten().tolist()
-    all_sec_filings_df = pd.DataFrame()
-    all_company_facts_df = pd.DataFrame()
-    for element in all_batches:
-        SEC_filings_df = element['SEC_filings']
-        company_facts_df = element['company_facts']
-
-        all_sec_filings_df = pd.concat([all_sec_filings_df, SEC_filings_df], ignore_index=True)
-        all_company_facts_df = pd.concat([all_company_facts_df, company_facts_df], ignore_index=True)
-
-    all_sec_filings_df.to_csv('all_sec_filings.csv', index=False)
-    all_company_facts_df.to_csv('all_company_facts.csv', index=False)
-
 
 
 def transform_companyDescription(json_api):
@@ -138,4 +117,22 @@ def get_companyDescription(cik):
     return company_df
 
 if __name__ == "__main__":
-    pass
+
+    spytable = get_spy500_formWiki()
+    tickers = ["MSFT",  "GOOGL", "AAPL", "AMZN", "META", "TSLA", "NFLX", "NVDA", "AMD", "INTC"]
+    spytable = spytable[spytable['Symbol'].isin(tickers)]
+    spytable = spytable[['Symbol', 'CIK']].values
+    print("Spy table loaded with", len(spytable), "tickers")
+    all_batches = get_spy500_batch_sec(spytable, 16)
+    all_batches = np.array(all_batches).flatten().tolist()
+    all_sec_filings_df = pd.DataFrame()
+    all_company_facts_df = pd.DataFrame()
+    for element in all_batches:
+        SEC_filings_df = element['SEC_filings']
+        company_facts_df = element['company_facts']
+
+        all_sec_filings_df = pd.concat([all_sec_filings_df, SEC_filings_df], ignore_index=True)
+        all_company_facts_df = pd.concat([all_company_facts_df, company_facts_df], ignore_index=True)
+
+    all_sec_filings_df.to_csv('all_sec_filings.csv', index=False)
+    all_company_facts_df.to_csv('all_company_facts.csv', index=False)

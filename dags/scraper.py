@@ -182,7 +182,7 @@ def get_companyfacts(cik, ticker):
         'diffDate', 'monthWindow', 'yearMonthDay', 'ticker']
 
     mergedDF = mergedDF[desired_order]
-    mergedDF.drop(["fy", "endFormat", "startFormat", "diffDate", 'frame'], inplace=True,axis=1)
+    mergedDF.drop(["fy", "endFormat", "startFormat", "diffDate"], inplace=True,axis=1)
     
     return mergedDF
 
