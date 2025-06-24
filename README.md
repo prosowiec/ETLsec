@@ -25,8 +25,10 @@ The solution is built using:
 - 🐍 **Python** for web scraping, transformation, and validation
 - 🐘 **PostgreSQL / CSV** as the target data warehouse
 
- <div style="display:flex; gap: 20px; align-items: flex-start;"> <img src="docs/model.jpg" alt="OLAP Model" style="max-width: 300px; border: 1px solid #ddd; padding: 5px;"/> <img src="docs/architecture.png" alt="ETLSEC Architecture" style="max-width: 400px; border: 1px solid #ddd; padding: 5px;"/> </div> 
-
+<div style="display:flex; gap: 20px; align-items: flex-start;">
+  <img src="docs/model.jpg" alt="OLAP Model" style="max-width: 150px; border: 1px solid #ddd; padding: 5px;"/>
+  <img src="docs/architecture.png" alt="ETLSEC Architecture" style="max-width: 200px; border: 1px solid #ddd; padding: 5px;"/>
+</div>
 ---
 
 ## 📄 Power BI Report
