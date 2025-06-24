@@ -25,8 +25,7 @@ The solution is built using:
 - 🐍 **Python** for web scraping, transformation, and validation
 - 🐘 **PostgreSQL / CSV** as the target data warehouse
 
-![ETLSEC Architecture](docs/architecture.png)
-
+ <div style="display:flex; gap: 20px; align-items: flex-start;"> <img src="docs/model.png" alt="OLAP Model" style="max-width: 300px; border: 1px solid #ddd; padding: 5px;"/> <img src="docs/architecture.png" alt="ETLSEC Architecture" style="max-width: 400px; border: 1px solid #ddd; padding: 5px;"/> </div> 
 
 ---
 
@@ -45,6 +44,7 @@ You can view the Power BI PDF report by clicking the link below:
 | Orchestration | Apache Airflow         |
 | Environment   | Docker, Docker Compose |
 | Data Sources  | SEC EDGAR API, Ninja API, yFinance |
+| Sentiment Analysis  | ProsusAI/finBERT |
 | Storage       | PostgreSQL / CSV       |
 | Transformation | Pandas, yFinance, finBert Sentiment |
 | Validation     | Custom GAAP metric mapping |
@@ -68,3 +68,7 @@ To build the custom Airflow image and start the ETL environment, run the followi
 docker build -t custom-airflow:3.0.1 .
 docker-compose up -d
 ```
+
+## 🧠 Credits
+
+Developed by **prosowiec** as part of a **Business Intelligence course project**.
