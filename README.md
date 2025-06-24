@@ -28,12 +28,13 @@ The solution is built using:
 ![ETLSEC Architecture](docs/architecture.png)
 
 
---
+---
 
-## 🧱 Power Bi
+## 📄 Power BI Report
 
+You can view the Power BI PDF report by clicking the link below:
 
-[Power Bi PDF](https://drive.google.com/file/d/1MEFvd2lzXrZ3alYl3vmi_Pxshr6wZ3l9/view?usp=sharing) (scrollable).
+👉 [Power BI Report (PDF)](https://drive.google.com/file/d/1MEFvd2lzXrZ3alYl3vmi_Pxshr6wZ3l9/view?usp=sharing)
 
 ---
 
