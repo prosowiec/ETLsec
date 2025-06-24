@@ -11,6 +11,9 @@ from async_request import get_fact_async,get_companyfacts,get_prices_async
 from ingestion import get_SEC_filings_and_companyfacts
 from stockPriceDim import classify_change
 import regex as re
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch 
+
 
 sec_xbrl_tags = {
     "Assets": [
@@ -211,32 +214,41 @@ def add_stock_price_dim(joined_df):
 
     return joined_df    
 
+def analyze_sentiment(text):
+    tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert", clean_up_tokenization_spaces = True)
+    model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
+
+    
+    inputs = tokenizer(text, return_tensors="pt", truncation=True)
+    outputs = model(**inputs)
+    #probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1).detach().numpy()[0]
+    logits = torch.nn.functional.softmax(outputs.logits, dim=-1).detach().numpy()
+    sentiment_score = pd.Series(logits[:, 0] - logits[:, 1])
+
+    return sentiment_score #probabilities.detach().numpy()[0]
+     
+    
+    
+
 def analyze_transcript(text):
     positive_words = ["growth", "profit", "strong", "increase", "record", "improvement", "innovation"]
     negative_words = ["decline", "loss", "weak", "decrease", "problem", "challenge", "risk"]
 
-    try:
-        # Obsługa brakujących danych
-        if pd.isna(text) or not isinstance(text, str) or text.strip() == "":
-            return [0, 0, 0, 0, 0.0]
-
-        text_clean = text.lower().strip()
-        words = re.findall(r'\b\w+\b', text_clean)
-        total_tokens = len(words)
-
-        # Liczenie słów z list
-        positive_count = sum(1 for word in words if word in positive_words)
-        negative_count = sum(1 for word in words if word in negative_words)
-
-        # Obliczanie wyników
-        sentiment_score = positive_count - negative_count + total_tokens * 0.0001
-        trans_length = len(text_clean)
-
-        return [trans_length, total_tokens, positive_count, negative_count, sentiment_score]
-
-    except Exception as e:
-        print(f"Błąd przetwarzania tekstu: {str(e)}")
+    if pd.isna(text) or not isinstance(text, str) or text.strip() == "":
         return [0, 0, 0, 0, 0.0]
+
+    text_clean = text.lower().strip()
+    words = re.findall(r'\b\w+\b', text_clean)
+    total_tokens = len(words)
+
+    positive_count = sum(1 for word in words if word in positive_words)
+    negative_count = sum(1 for word in words if word in negative_words)
+
+    sentiment_score = analyze_sentiment(text)
+    trans_length = len(text_clean)
+
+    return [trans_length, total_tokens, positive_count, negative_count, sentiment_score]
+
 
 
 def add_transcript_info(df):
