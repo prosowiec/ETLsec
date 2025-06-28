@@ -29,6 +29,7 @@ The solution is built using:
   <img src="docs/model.jpg" alt="OLAP Model" style="max-width: 150px; border: 1px solid #ddd; padding: 5px;"/>
   <img src="docs/architecture.png" alt="ETLSEC Architecture" style="max-width: 200px; border: 1px solid #ddd; padding: 5px;"/>
 </div>
+
 ---
 
 ## 📄 Power BI Report
